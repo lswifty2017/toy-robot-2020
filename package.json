@@ -1,0 +1,15 @@
+{
+  "name": "toy-robot",
+  "version": "1.0.0",
+  "description": "Code challenge",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Liam Swift",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
