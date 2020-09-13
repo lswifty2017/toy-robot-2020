@@ -3,7 +3,7 @@ const parseInput = (userInput = '') => {
     return {
       success: false,
       errorMessage:
-        'No input detected, please use of the following commands: \nMOVE \nREPORT \nLEFT \nRIGHT \nPLACE x,y,z',
+        'No input detected, please use of the following commands: \nMOVE \nREPORT \nLEFT \nRIGHT \nPLACE X,Y,D',
     };
   }
 
@@ -16,7 +16,7 @@ const parseInput = (userInput = '') => {
       return {
         success: false,
         errorMessage:
-          'No place position/direction detected, please use the following format: PLACE x,y,z',
+          'No place position/direction detected, please use the following format: PLACE X,Y,D',
       };
     }
 
@@ -45,7 +45,7 @@ const parseInput = (userInput = '') => {
 
     return {
       success: false,
-      errorMessage: 'Place command invalid, check x,y,z format',
+      errorMessage: 'Place command invalid, check X,Y,D format',
     };
   }
 
@@ -80,7 +80,7 @@ const parseInput = (userInput = '') => {
   return {
     success: false,
     errorMessage:
-      'Command invalid, please use of the following commands: \nMOVE \nREPORT \nLEFT \nRIGHT \nPLACE x,y,z',
+      'Command invalid, please use of the following commands: \nMOVE \nREPORT \nLEFT \nRIGHT \nPLACE X,Y,D',
   };
 };
 

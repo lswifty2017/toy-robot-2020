@@ -3,6 +3,7 @@ const parseInput = require('../parseInput');
 describe('Parse Input function', () => {
   it('returns an object with property "success" set to false upon invalid input', () => {
     expect(parseInput('vfdsv fdv fs ').success).toBeFalsy();
+    expect(parseInput('').success).toBeFalsy();
   });
 
   it('returns an object with property "success" set to true upon valid input', () => {
