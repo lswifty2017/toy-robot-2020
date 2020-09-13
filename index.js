@@ -1,6 +1,7 @@
 require('colors');
 const readline = require('readline');
 const parseInput = require('./src/parser/parseInput');
+const rotate = require('./src/actions/rotate');
 
 console.log('Welcome to toy robot.'.green.bold);
 console.log('');
@@ -30,39 +31,39 @@ const robotState = {
 
 // Dev Code
 
-// const parsedInput = parseInput('place -1.5,2,north');
+const newDirection = rotate('left', 'north');
 
-// console.log(parsedInput);
+console.log(newDirection);
 
 //
 
-const handleLineInput = (input) => {
-  const parsedInput = parseInput(input);
+// const handleLineInput = (input) => {
+//   const parsedInput = parseInput(input);
 
-  if (!parsedInput.success) {
-    console.log(parsedInput.errorMessage);
-    rl.prompt();
-  }
+//   if (!parsedInput.success) {
+//     console.log(parsedInput.errorMessage);
+//     rl.prompt();
+//   }
 
-  if (parsedInput.success) {
-    console.log(parsedInput.action);
-    rl.close();
-  }
+//   if (parsedInput.success) {
+//     console.log(parsedInput.action);
+//     rl.close();
+//   }
 
-  // console.log(`handling input ${input}`);
-  // rl.close();
-};
+//   // console.log(`handling input ${input}`);
+//   // rl.close();
+// };
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+// });
 
-rl.on('line', handleLineInput)
-  .on('close', () => {
-    console.log('Thanks for playing');
-    process.exit(0);
-  })
-  .setPrompt('Robot Command: ');
+// rl.on('line', handleLineInput)
+//   .on('close', () => {
+//     console.log('Thanks for playing');
+//     process.exit(0);
+//   })
+//   .setPrompt('Robot Command: ');
 
-rl.prompt();
+// rl.prompt();
