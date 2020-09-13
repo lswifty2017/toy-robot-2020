@@ -23,8 +23,8 @@ describe('Parse Input function', () => {
   });
 
   it('returns an object with x/y position and direction properties upon "PLACE" command', () => {
-    expect(parseInput('PLACE 0,0,NORTH').xPosition).toEqual(0);
-    expect(parseInput('PLACE 0,1,NORTH').yPosition).toEqual(1);
+    expect(parseInput('PLACE 0,0,NORTH').positionX).toEqual(0);
+    expect(parseInput('PLACE 0,1,NORTH').positionY).toEqual(1);
     expect(parseInput('PLACE 2,2,NORTH').direction).toEqual('north');
   });
 });
