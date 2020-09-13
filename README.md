@@ -1,5 +1,38 @@
 # Toy Robot Simulator
 
+## Installation and Usage
+
+Make sure that you have Node.js installed.
+You can install Node from their website https://nodejs.org/.
+
+cd to the root directory and invoke:
+
+`$ npm install`
+
+Now you can run the application with:
+
+`$ npm start`
+
+You can also run the test suite with:
+
+`$ npm test`
+
+## Design Decisions and Dependencies
+
+This project was developed with a functional approach, avoiding mutation as much as possible with the use of pure, stateless functions. State is only handled within a single location.
+
+A test driven approach was used to develop unit tests parser and action functions using Jest testing framework. The controller function to handle the user input is tested in a more integrative way, focused on the matching the design criteria as a whole.
+
+The project is linted with Prettier, and has a configuration file configured for VS Code IDE.
+
+## Future Considerations
+
+Currently the state is only managed as an object, however, this is would be easily subject to mutation given scale of the project. A state management solution such as Redux would help create immutable state going forward.
+
+User input validation is currently case insensitive, but does not account for empty spaces before and after commands. Perhaps use of a regex validator function could be added as a utility.
+
+---
+
 ## Description
 
 - The application is a simulation of a toy robot moving on a square tabletop,
