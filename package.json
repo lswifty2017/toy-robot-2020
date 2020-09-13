@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "Code challenge",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest"
   },
   "author": "Liam Swift",
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "prettier": "2.1.1"
   }
 }

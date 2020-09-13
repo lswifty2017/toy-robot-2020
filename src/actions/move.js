@@ -1,3 +1,3 @@
-const move = (position, directionFacing ) => {
+const move = ({ positionX, positionY, direction, boardDimensions }) => {};
 
-}
+module.exports = move;

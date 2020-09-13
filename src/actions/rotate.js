@@ -1,3 +1,3 @@
-const rotate = (currentDirection, rotateDirection) => {
+const rotate = (currentDirection, rotateDirection) => {};
 
-}
+module.exports = rotate;
