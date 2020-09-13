@@ -9,7 +9,7 @@ describe('Move function', () => {
   it('returns the correct updated x/y positions for all possible directions', () => {
     expect(
       move({
-        postionX: 2,
+        positionX: 2,
         positionY: 2,
         direction: 'north',
         boardDimensions: boardDimensions,
@@ -22,7 +22,7 @@ describe('Move function', () => {
 
     expect(
       move({
-        postionX: 2,
+        positionX: 2,
         positionY: 2,
         direction: 'south',
         boardDimensions: boardDimensions,
@@ -35,7 +35,7 @@ describe('Move function', () => {
 
     expect(
       move({
-        postionX: 2,
+        positionX: 2,
         positionY: 2,
         direction: 'east',
         boardDimensions: boardDimensions,
@@ -48,7 +48,7 @@ describe('Move function', () => {
 
     expect(
       move({
-        postionX: 2,
+        positionX: 2,
         positionY: 2,
         direction: 'west',
         boardDimensions: boardDimensions,
@@ -65,16 +65,16 @@ describe('Move function', () => {
 
     expect(
       move({
-        xDirection: 0,
-        yDirection: 0,
+        positionX: 0,
+        positionY: 0,
         direction: 'south',
         boardDimensions: boardDimensions,
       })
     ).toEqual(expectedObject);
     expect(
       move({
-        xDirection: 0,
-        yDirection: 0,
+        positionX: 0,
+        positionY: 0,
         direction: 'west',
         boardDimensions: boardDimensions,
       })
@@ -83,7 +83,7 @@ describe('Move function', () => {
     expect(
       move({
         positionX: 0,
-        positionY: boardHeight,
+        positionY: boardDimensions.height,
         direction: 'north',
         boardDimensions: boardDimensions,
       })
@@ -91,7 +91,7 @@ describe('Move function', () => {
     expect(
       move({
         positionX: 0,
-        positionY: boardHeight,
+        positionY: boardDimensions.height,
         direction: 'west',
         boardDimensions: boardDimensions,
       })
@@ -99,16 +99,16 @@ describe('Move function', () => {
 
     expect(
       move({
-        positionX: boardWith,
-        positionY: boardHeight,
+        positionX: boardDimensions.width,
+        positionY: boardDimensions.height,
         direction: 'east',
         boardDimensions: boardDimensions,
       })
     ).toEqual(expectedObject);
     expect(
       move({
-        positionX: boardWith,
-        positionY: boardHeight,
+        positionX: boardDimensions.width,
+        positionY: boardDimensions.height,
         direction: 'north',
         boardDimensions: boardDimensions,
       })
@@ -116,7 +116,7 @@ describe('Move function', () => {
 
     expect(
       move({
-        positionX: boardWith,
+        positionX: boardDimensions.width,
         positionY: 0,
         direction: 'east',
         boardDimensions: boardDimensions,
@@ -124,7 +124,7 @@ describe('Move function', () => {
     ).toEqual(expectedObject);
     expect(
       move({
-        positionX: boardWith,
+        positionX: boardDimensions.width,
         positionY: 0,
         direction: 'south',
         boardDimensions: boardDimensions,
